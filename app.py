@@ -7,8 +7,8 @@ st.set_page_config(page_title="Prim's Algorithm Visualization", layout="wide")
 st.title("🌳 Prim's Algorithm - Minimum Spanning Tree")
 
 st.markdown("""
-Bu uygulama, Prim's Algorithm'in nasıl çalıştığını adım adım gösterir.  
-Soldan grafı tanımlayabilir, ardından sonucu görebilirsiniz.
+This application demonstrates how Prim's Algorithm constructs a Minimum Spanning Tree (MST) step by step.
+Choose a starting node from the sidebar and click the button to run the algorithm.
 """)
 
 default_graph = {
@@ -18,26 +18,24 @@ default_graph = {
     "D": [("B", 4), ("C", 2)]
 }
 
-st.sidebar.header("Graf Ayarları")
-start_node = st.sidebar.text_input("Başlangıç Düğümü", value="C")
+st.sidebar.header("Graph Settings")
+start_node = st.sidebar.text_input("Start Node", value="C")
 
-run_button = st.sidebar.button("Algoritmayı Çalıştır")
+run_button = st.sidebar.button("Run Prim's Algorithm")
 
 if run_button:
-    st.subheader("🔎 MST Adımları")
+    st.subheader("🔍 MST Steps")
     mst, total = prim(default_graph, start_node)
 
     for u, v, w in mst:
-        st.write(f"📍 {u} -- {v} → ağırlık: {w}")
+        st.write(f"📍 {u} -- {v} → weight: {w}")
 
-    st.success(f"Toplam Maliyet: {total}")
+    st.success(f"Total Cost: {total}")
 
-    st.subheader("📊 Görselleştirilmiş Grafik")
+    st.subheader("📊 Visualized Graph")
+    mode = st.radio("Visualization Mode", ["Show all", "Step-by-step"])
 
-    mode = st.radio("Görselleştirme Modu", ["Hepsini göster", "Adım adım göster"])
-
-    if mode == "Adım adım göster":
+    if mode == "Step-by-step":
         draw_graph_step_by_step(mst)
     else:
         draw_graph(mst)
-
