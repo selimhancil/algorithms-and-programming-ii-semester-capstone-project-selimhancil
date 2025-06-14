@@ -5,14 +5,14 @@ import time
 def visualize_prims_algorithm(graph_data):
     G = nx.Graph()
 
-    # Tüm düğümleri ve kenarları grafiğe ekle
+   
     for node in graph_data['nodes']:
         G.add_node(node)
 
     for edge in graph_data['edges']:
         G.add_edge(edge[0], edge[1], weight=edge[2])
 
-    pos = nx.spring_layout(G, seed=42)  # düğümleri konumlandır
+    pos = nx.spring_layout(G, seed=42)  
 
     visited = set()
     mst_edges = []
@@ -39,7 +39,7 @@ def visualize_prims_algorithm(graph_data):
         mst_edges.append((u, v))
         visited.add(v)
 
-        # GÖRSELLEŞTİRME
+        
         plt.clf()
         nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=500)
         nx.draw_networkx_edges(G, pos, edgelist=mst_edges, edge_color='r', width=2)
