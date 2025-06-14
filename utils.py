@@ -1,9 +1,8 @@
-# utils.py
-
+import streamlit as st
 import matplotlib.pyplot as plt
 import networkx as nx
-import streamlit as st
 import time
+
 
 def draw_graph(mst):
     G = nx.Graph()
@@ -20,17 +19,12 @@ def draw_graph(mst):
 
     st.pyplot(fig)
 
-import time
-import matplotlib.pyplot as plt
-import networkx as nx
-import streamlit as st
-
+# MST'yi adım adım çizen fonksiyon
 def draw_graph_step_by_step(mst):
     G = nx.Graph()
-    pos = {}
     fig, ax = plt.subplots(figsize=(6, 4))
 
-
+    # Tüm düğümleri baştan ekle ki layout sabit kalsın
     all_nodes = set()
     for u, v, _ in mst:
         all_nodes.add(u)
@@ -38,38 +32,15 @@ def draw_graph_step_by_step(mst):
     G.add_nodes_from(all_nodes)
     pos = nx.spring_layout(G, seed=42)
 
+
     for i, (u, v, w) in enumerate(mst, 1):
         G.add_edge(u, v, weight=w)
-
         edge_labels = nx.get_edge_attributes(G, 'weight')
 
         ax.clear()
         nx.draw(G, pos, with_labels=True, node_color="#add8e6", node_size=1000, font_size=16, ax=ax)
         nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, ax=ax)
 
-        st.subheader(f"🔁 Adım {i}: {u} -- {v} (ağırlık: {w})")
+        st.subheader(f"🔁 Step {i}: {u} -- {v} (weight: {w})")
         st.pyplot(fig)
         time.sleep(1.2)  
-
-import time
-import streamlit as st
-import networkx as nx
-import matplotlib.pyplot as plt
-
-def draw_graph_step_by_step(mst):
-    G = nx.Graph()
-    fig, ax = plt.subplots()
-
-    for i, (u, v, w) in enumerate(mst, start=1):
-        G.add_edge(u, v, weight=w)
-
-        ax.clear()
-        pos = nx.spring_layout(G)
-        nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', ax=ax)
-        labels = nx.get_edge_attributes(G, 'weight')
-        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels, ax=ax)
-
-        st.pyplot(fig)
-        st.info(f"Step {i}: {u} -- {v} (weight: {w})")
-        time.sleep(1)  
-
