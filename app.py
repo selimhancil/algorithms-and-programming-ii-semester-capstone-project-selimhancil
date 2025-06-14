@@ -33,9 +33,11 @@ if run_button:
     st.success(f"Toplam Maliyet: {total}")
 
     st.subheader("📊 Görselleştirilmiş Grafik")
+
     mode = st.radio("Görselleştirme Modu", ["Hepsini göster", "Adım adım göster"])
 
     if mode == "Adım adım göster":
         draw_graph_step_by_step(mst)
     else:
         draw_graph(mst)
+
