@@ -3,6 +3,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 import streamlit as st
+import time
 
 def draw_graph(mst):
     G = nx.Graph()
@@ -49,4 +50,26 @@ def draw_graph_step_by_step(mst):
         st.subheader(f"🔁 Adım {i}: {u} -- {v} (ağırlık: {w})")
         st.pyplot(fig)
         time.sleep(1.2)  
+
+import time
+import streamlit as st
+import networkx as nx
+import matplotlib.pyplot as plt
+
+def draw_graph_step_by_step(mst):
+    G = nx.Graph()
+    fig, ax = plt.subplots()
+
+    for i, (u, v, w) in enumerate(mst, start=1):
+        G.add_edge(u, v, weight=w)
+
+        ax.clear()
+        pos = nx.spring_layout(G)
+        nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', ax=ax)
+        labels = nx.get_edge_attributes(G, 'weight')
+        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels, ax=ax)
+
+        st.pyplot(fig)
+        st.info(f"Step {i}: {u} -- {v} (weight: {w})")
+        time.sleep(1)  
 
