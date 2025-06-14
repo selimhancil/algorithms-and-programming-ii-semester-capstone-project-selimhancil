@@ -17,8 +17,7 @@ Amaç, Prim's algoritmasını Python ve Streamlit kullanarak görselleştirmek, 
 
 ## 🚀 Uygulama Adresi
 
-📎 [Uygulamayı buradan deneyin](https://share.streamlit.io/...)  
-(Deploy işleminden sonra buraya link eklenecek)
+📎 [Uygulamayı buradan deneyin](https://algorithms-and-programming-ii-semester-capstone-project-selimh.streamlit.app/) 
 
 ---
 
@@ -32,15 +31,6 @@ Amaç, Prim's algoritmasını Python ve Streamlit kullanarak görselleştirmek, 
 
 ---
 
-## ⚙️ Nasıl Çalıştırılır?
-
-```bash
-git clone https://github.com/kullaniciadi/proje-adi.git
-cd proje-adi
-pip install -r requirements.txt
-streamlit run app.py
-
-...
 
 ## 🧪 Testler
 
