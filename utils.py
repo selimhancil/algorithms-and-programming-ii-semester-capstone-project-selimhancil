@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import time
 
-
 def draw_graph(mst):
     G = nx.Graph()
     
@@ -19,19 +18,16 @@ def draw_graph(mst):
 
     st.pyplot(fig)
 
-# MST'yi adım adım çizen fonksiyon
 def draw_graph_step_by_step(mst):
     G = nx.Graph()
     fig, ax = plt.subplots(figsize=(6, 4))
 
-    # Tüm düğümleri baştan ekle ki layout sabit kalsın
     all_nodes = set()
     for u, v, _ in mst:
         all_nodes.add(u)
         all_nodes.add(v)
     G.add_nodes_from(all_nodes)
     pos = nx.spring_layout(G, seed=42)
-
 
     for i, (u, v, w) in enumerate(mst, 1):
         G.add_edge(u, v, weight=w)
@@ -43,4 +39,4 @@ def draw_graph_step_by_step(mst):
 
         st.subheader(f"🔁 Step {i}: {u} -- {v} (weight: {w})")
         st.pyplot(fig)
-        time.sleep(1.2)  
+        time.sleep(1.2)
