@@ -1,58 +1,67 @@
-# 🌳 Prim's Algorithm Visualization – MST Interactive Web App
+🌳 Prim's Algorithm Visualization – Interactive MST Web Application
 
-Bu proje, Fırat Üniversitesi Yazılım Mühendisliği bölümü "Algoritma ve Programlama II" dersi dönem projesi kapsamında geliştirilmiştir.  
-Amaç, Prim's algoritmasını Python ve Streamlit kullanarak görselleştirmek, analiz etmek ve kullanıcıların etkileşimli olarak deneyimlemesini sağlamaktır.
+This project was developed as part of the "Algorithms and Programming II" term course in the Software Engineering Department at Firat University.
+Its primary objective is to visualize and analyze Prim's Algorithm using Python and Streamlit, enabling users to interactively explore the construction of a Minimum Spanning Tree (MST).
 
----
+📥In-App Screenshots
+<img width="1680" alt="Ekran Resmi 2025-06-15 23 47 31" src="https://github.com/user-attachments/assets/ff80e81e-7559-4e0b-8b15-00a443defa30" />
 
-## 🎯 Proje Hedefleri
+<img width="1680" alt="Ekran Resmi 2025-06-15 23 47 48" src="https://github.com/user-attachments/assets/6baa5fb0-add8-47ce-ad84-b735b9e20908" />
 
-- Prim's algoritmasının Python ile uygulanması
-- Streamlit ile kullanıcı arayüzü
-- MST (Minimum Spanning Tree) adımlarının adım adım görselleştirilmesi
-- Zaman/mekân karmaşıklık analizi (Big O)
-- Test edilebilir, modüler ve dağıtılabilir yapıda geliştirme
 
----
+🌟 Project Objectives
 
-## 🚀 Uygulama Adresi
+Implementation of Prim's Algorithm using the Python programming language
 
-📎 [Uygulamayı buradan deneyin](https://share.streamlit.io/...)  
-(Deploy işleminden sonra buraya link eklenecek)
+Development of a user-friendly interface through Streamlit
 
----
+Step-by-step visualization of MST formation
 
-## 🧠 Kullanılan Teknolojiler
+Time and space complexity analysis (Big O notation)
 
-- Python 3.8+
-- Streamlit
-- NetworkX
-- Matplotlib
-- Git & GitHub
+Modular, testable, and distributable software architecture
 
----
+🚀 Deployment
 
-## ⚙️ Nasıl Çalıştırılır?
+📌 Access the Live Application
 
-```bash
-git clone https://github.com/kullaniciadi/proje-adi.git
-cd proje-adi
+
+🧠 Technologies Used
+
+Python 3.8+
+
+Streamlit
+
+NetworkX
+
+Matplotlib
+
+Git & GitHub
+
+⚙️ Installation & Execution
+
+git clone https://github.com/username/project-name.git
+cd project-name
 pip install -r requirements.txt
 streamlit run app.py
 
-...
+🔮 Testing
 
-## 🧪 Testler
+Comprehensive unit tests were conducted using the test_algorithm.py script.
+Test scenarios include:
 
-- `test_algorithm.py` dosyası ile kapsamlı birim testleri yapılmıştır
-- Test edilen senaryolar:
-  - Basit grafik
-  - Tek düğüm
-  - Bağlantısız grafik
+Connected graphs with varying complexity
 
----
+Graphs with a single node
 
-## 👤 Geliştirici
+Disconnected (invalid) graphs
 
-Selim Han Çil - 230543024
-[TikTok](https://www.tiktok.com/@selimhancom) – [YouTube](https://www.youtube.com/@selimhanyoutube) – [Instagram](https://www.instagram.com/selimhancom)
+📌 Upcoming Feature: Step-by-Step Visualization Mode
+
+An enhanced Step-by-Step Visualization Mode, which will allow users to observe the algorithm's decisions at each iteration in real-time, is currently under development.
+
+This feature is scheduled to be released and integrated into the application by July 13, 2025.
+
+👤 Developer
+
+Selim Han ÇİL Student ID: 230543024📱 TikTok – YouTube – Instagram
