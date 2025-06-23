@@ -1,67 +1,92 @@
-# 🌳 Prim's Algorithm Visualization – MST Interactive Web App
+# 🌲 Prim's Algorithm MST Visualizer
 
-This project was developed as part of the **"Algorithms and Programming II"** semester course at the Department of Software Engineering, Fırat University.  
-The goal is to visualize and analyze **Prim's Algorithm** using Python and Streamlit, enabling users to interactively experience how it works.
+[![Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-cloud-link)
 
----
-
-## 🛠️ ABOUT THE APPLICATION UPDATE
-
-The second feature under the **"Visualized Graph"** section, titled **"Step-by-Step Display"**, has recently been introduced as part of the application’s latest update.
-
-This module is currently under active development, with the goal of enhancing user interaction and deepening the understanding of Prim’s Algorithm through incremental visual feedback.
-
-🔄 The feature is expected to reach full functionality by **July 13, 2025**.
-
-We appreciate your patience and understanding during this ongoing improvement process.
+## 🚀 Live Demo
+[https://your-streamlit-cloud-link](https://your-streamlit-cloud-link)
 
 ---
 
-## 🌅 IN-APP SCREENSHOTS
+## 📖 Project Purpose
+This project is an interactive web application to visualize **Prim's Algorithm** for finding the Minimum Spanning Tree (MST) of a weighted undirected graph. Built with Python and Streamlit, it allows users to:
+- Create and edit graphs interactively
+- Watch step-by-step or animated construction of the MST
+- See real-time edge selection and MST cost updates
 
-<img width="1680" alt="Screenshot 1" src="https://github.com/user-attachments/assets/e8b6b041-93b3-40b9-a95b-7aedd766871e" />
+## 🌟 What is Prim's Algorithm?
+Prim's Algorithm is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph. It starts from an arbitrary node and grows the MST by always choosing the minimum-weight edge that connects a visited node to an unvisited node.
 
-<img width="1680" alt="Screenshot 2" src="https://github.com/user-attachments/assets/523119e3-0a7c-40c4-990a-a638547d29c6" />
-
----
-
-## 🎯 PROJECT OBJECTIVES
-
-- Implement Prim's Algorithm using Python
-- Build an interactive user interface with Streamlit
-- Visualize the step-by-step construction of the Minimum Spanning Tree (MST)
-- Analyze time and space complexity using Big-O notation
-- Ensure a modular, testable, and deployable project structure
+**Applications:** Network design, circuit design, clustering, etc.
 
 ---
 
-## 🚀 LIVE APPLICATION
+## 🖼️ Screenshots
 
-📎 [Try the Application Here](https://algorithms-and-programming-ii-semester-capstone-project-selimh.streamlit.app/) 
+| Graph Creation | Step-by-Step Visualization |
+|---------------|--------------------------|
+| ![Graph Creation](assets/graph_creation.png) | ![Step Visualization](assets/step_visualization.png) |
 
----
-
-## 🧠 TECHNOLOGIES USED
-
-- Python 3.8+
-- Streamlit
-- NetworkX
-- Matplotlib
-- Git & GitHub
+*Replace with your own screenshots or GIFs!*
 
 ---
 
-## 🧪 TESTING
+## ⏱️ Complexity
+- **Time Complexity:** O(E log V) using a min-heap (priority queue)
+- **Space Complexity:** O(V + E) for storing the graph and heap
 
-- Unit tests were implemented using the `test_algorithm.py` module.
-- Covered scenarios include:
-  - Simple graphs
-  - Single-node graphs
-  - Disconnected graphs
+Where V = number of vertices, E = number of edges.
 
 ---
 
-## 👤 DEVELOPER
+## 🧱 Project Structure
+```
+.
+├── app.py              # Main Streamlit app
+├── algorithm.py        # Prim's algorithm implementation
+├── utils.py            # Helper functions
+├── test_algorithm.py   # Unit tests
+├── requirements.txt    # Dependencies
+├── README.md           # This file
+└── data/               # (Optional) Sample graphs
+```
 
-**Selim Han Çil** – Student ID: 230543024  
-[TikTok](https://www.tiktok.com/@selimhancom) – [YouTube](https://www.youtube.com/@selimhanyoutube) – [Instagram](https://www.instagram.com/selimhancom)
+---
+
+## 🛠️ How to Run Locally
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/yourusername/prims-alg-visualizer.git
+   cd prims-alg-visualizer
+   ```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the app:**
+   ```bash
+   streamlit run app.py
+   ```
+4. **Run tests:**
+   ```bash
+   pytest test_algorithm.py
+   ```
+
+---
+
+## ☁️ Deploy on Streamlit Cloud
+1. Push your code to GitHub
+2. Go to [Streamlit Cloud](https://streamlit.io/cloud)
+3. Connect your repo and deploy!
+
+---
+
+## 📚 References
+- [CLRS: Introduction to Algorithms](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
+- [Visualgo: MST](https://visualgo.net/en/mst)
+- [NetworkX Documentation](https://networkx.org/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+
+---
+
+## 👨‍💻 Author
+Your Name ([GitHub](https://github.com/yourusername)) 
