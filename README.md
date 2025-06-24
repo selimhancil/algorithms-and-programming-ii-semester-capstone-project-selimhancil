@@ -1,6 +1,5 @@
 # 🌲 Prim's Algorithm MST Visualizer
 
-[![Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-cloud-link)
 
 ## 🚀 Live Demo
 https://algorithms-and-programming-ii-semester-capstone-project-selimh.streamlit.app/
@@ -21,10 +20,6 @@ Prim's Algorithm is a greedy algorithm that finds a minimum spanning tree for a 
 
 ## 🖼️ Screenshots
 
-| Graph Creation | Step-by-Step Visualization |
-|---------------|--------------------------|
-| <img width="1680" alt="Ekran Resmi 2025-06-23 22 51 50" src="https://github.com/user-attachments/assets/5f67fb20-17ef-461f-8b30-b9c7b7a2649b" /> | 
-<img width="1680" alt="Ekran Resmi 2025-06-23 22 52 53" src="https://github.com/user-attachments/assets/aca64751-cbce-4555-a81b-c4c24d5e1037" /> |
 
 
 ---
