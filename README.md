@@ -2,7 +2,7 @@
 
 
 ## 🚀 Live Demo
-https://algorithms-and-programming-ii-semester-capstone-project-selimh.streamlit.app/
+https://selimhanciil.streamlit.app/
 ---
 
 ## 📖 Project Purpose
@@ -20,6 +20,8 @@ Prim's Algorithm is a greedy algorithm that finds a minimum spanning tree for a 
 
 ## 🖼️ Screenshots
 
+<img width="1680" alt="Ekran Resmi 2025-06-24 21 00 35" src="https://github.com/user-attachments/assets/0f1706cd-7fad-4f02-a528-ac60d6df4863" />
+<img width="1680" alt="Ekran Resmi 2025-06-24 21 00 19" src="https://github.com/user-attachments/assets/e0ee9468-1e66-440d-b482-b6667ad7dcf8" />
 
 
 ---
